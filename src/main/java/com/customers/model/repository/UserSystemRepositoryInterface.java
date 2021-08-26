@@ -9,7 +9,7 @@ public interface UserSystemRepositoryInterface {
     
      List<UserSystem> findAll();
      
-     Optional<UserSystem> findByIdUser(long iduser);
+     Optional<UserSystem> findByIduser(long iduser);
      
      int deleteById(long iduser);
      
