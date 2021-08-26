@@ -1,0 +1,25 @@
+loggin:
+    level:
+        org:
+            hibernate:
+                SQL: debug
+server:
+    port: 9090
+    tomcat:
+        connections:
+            max: 100000
+        threads:
+            max: 400
+spring:
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        password: napo123
+        platform: postgres
+        url: jdbc:postgresql://localhost:5432/customerDB
+        username: desarrollo
+    jpa:
+        open-in-view: false
+        database: POSTGRESQL
+        hibernate:
+            ddl-auto: none
+        show-sql: false
