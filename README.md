@@ -1,6 +1,6 @@
 # CustomerBackend
 
-Bakend MS para customer, este proyecto fue reazido son Spring Boot.
+Bakend MS para customer, este proyecto fue realizado son Spring Boot.
 
 ## Development server
 
