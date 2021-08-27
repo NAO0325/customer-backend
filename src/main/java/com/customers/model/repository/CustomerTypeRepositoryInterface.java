@@ -11,6 +11,8 @@ public interface CustomerTypeRepositoryInterface {
      
      Optional<CustomerType> findByIdtype(long idtype);
      
+     Optional<CustomerType> findLast();
+     
      int deleteById(long idtype);
      
      int insert(CustomerType customerType);

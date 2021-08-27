@@ -11,7 +11,7 @@ public interface CustomerTypeServiceInterface {
 
     int deleteById(long idtype) throws Exception;
 
-    int insert(CustomerType customerType) throws Exception;
+    CustomerType insert(CustomerType customerType) throws Exception;
 
-    int update(CustomerType customerType) throws Exception;
+    CustomerType update(CustomerType customerType) throws Exception;
 }

@@ -31,6 +31,12 @@ public class CustomerTypeRepository implements CustomerTypeRepositoryInterface {
             idtype
         }, new BeanPropertyRowMapper<>(CustomerType.class)));
     }
+    
+    @Override
+    public Optional<CustomerType> findLast() {
+        return Optional.of(jdbcTemplate.queryForObject("SELECT * FROM customer_type ORDER BY idtype DESC LIMIT 1", 
+                new BeanPropertyRowMapper<>(CustomerType.class)));
+    }
 
     @Override
     public int deleteById(long idtype) {

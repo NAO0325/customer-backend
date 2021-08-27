@@ -11,6 +11,8 @@ public interface CustomerRepositoryInterface {
      
      Optional<Customer> findByIdCustomer(long idcustomer);
      
+     Optional<Customer> findLast();
+     
      int deleteById(long idcustomer);
      
      int insert(Customer customer);

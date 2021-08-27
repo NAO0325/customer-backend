@@ -33,13 +33,21 @@ public class CustomerService implements CustomerServiceInterface {
     }
 
     @Override
-    public int insert(Customer customer) throws Exception {
-        return repo.insert(customer);
+    public Customer insert(Customer customer) throws Exception {
+        int result = repo.insert(customer);
+        if (result != 0) {
+            return repo.findLast().orElse(new Customer());
+        }
+        return null;
     }
 
     @Override
-    public int update(Customer customer) throws Exception {
-        return repo.update(customer);
+    public Customer update(Customer customer) throws Exception {
+        int result = repo.update(customer);
+        if (result != 0) {
+            return repo.findByIdCustomer(customer.getIdcustomer()).orElse(customer);
+        }
+        return null;
     }
 
 }

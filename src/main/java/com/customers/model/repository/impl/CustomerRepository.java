@@ -33,6 +33,12 @@ public class CustomerRepository implements CustomerRepositoryInterface {
     }
 
     @Override
+    public Optional<Customer> findLast() {
+        return Optional.of(jdbcTemplate.queryForObject("SELECT * FROM customer ORDER BY idcustomer DESC LIMIT 1",
+                new BeanPropertyRowMapper<>(Customer.class)));
+    }
+
+    @Override
     public int deleteById(long idcustomer) {
         return jdbcTemplate.update("DELETE FROM customer WHERE idcustomer=?", new Object[]{
             idcustomer
@@ -41,7 +47,7 @@ public class CustomerRepository implements CustomerRepositoryInterface {
 
     @Override
     public int insert(Customer customer) {
-        return jdbcTemplate.update("INSERT INTO customer (idtype, dni, customer_name, contact, region) " + "values(?, ?, ?, ?, ?, ?)",
+        return jdbcTemplate.update("INSERT INTO customer (idtype, dni, customer_name, contact, region) " + "values(?, ?, ?, ?, ?)",
                 new Object[]{
                     customer.getIdtype(), customer.getDni(), customer.getCustomerName(), customer.getContact(), customer.getRegion()
                 });
