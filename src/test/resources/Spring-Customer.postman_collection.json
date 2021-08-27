@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "b7d9810a-1f94-4e92-8d70-e717488d9119",
+		"name": "Spring-Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/api/customertype/listAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/customertype/listAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"customertype",
+						"listAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/customer/listAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/customer/listAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"customer",
+						"listAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/customertype/insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"typeName\": \"OTRO MAS 2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/customertype/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"customertype",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/customer/insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idtype\": 2,\n    \"dni\": \"657768768\",\n    \"customerName\": \"CUSTOMER 2\",\n    \"contact\": \"Calle falsa 5688\",\n    \"region\": \"Bogota\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/customer/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"customer",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/customertype/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"idtype\": 5,\n        \"typeName\": \"OTRO MAS 2 MDFUDDF\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/customertype/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"customertype",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/customer/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idcustomer\": 2,\n    \"idtype\": 1,\n    \"dni\": \"657768768\",\n    \"customerName\": \"CUSTOMER 2 MDF\",\n    \"contact\": \"Calle falsa 5688\",\n    \"region\": \"Bogota\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/customer/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"customer",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/customertype/deleteById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/customertype/deleteById?id=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"customertype",
+						"deleteById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/customer/deleteById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/customer/deleteById?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"customer",
+						"deleteById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
